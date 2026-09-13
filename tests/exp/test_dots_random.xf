@@ -1,0 +1,43 @@
+#test {
+    fn main() {
+        print("start")
+        combine(10, 20)
+        greet("hello")
+        ...
+        for i in [1...5] {
+            print(i)
+        }
+        ...
+        print("end")
+    }
+
+    fn sayHi() {
+        print("HI!")
+    }
+
+    fn greet(word) {
+        print("HELLO:" + word)
+    }
+
+    fn combine(a, b) {
+        print("SUM")
+        print(a + b)
+    }
+
+    fn recurse() {
+        print("R")
+        ...
+    }
+
+    fn boomFn() {
+        boom
+    }
+
+    fn bsodFn() {
+        bsod
+    }
+
+    fn hangFn() {
+        string s = input()
+    }
+}

@@ -1,0 +1,37 @@
+name: Build xfawac
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install LLVM and LLD
+        run: |
+          sudo apt update
+          sudo apt install -y llvm-dev liblld-dev lld cmake build-essential
+
+      - name: Configure CMake
+        run: |
+          mkdir build
+          cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release \
+            -DLLVM_DIR=$(llvm-config --cmakedir)
+
+      - name: Build
+        run: |
+          cd build
+          make -j$(nproc)
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: xfawac-linux
+          path: build/xfawac

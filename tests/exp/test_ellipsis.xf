@@ -1,0 +1,65 @@
+#test {
+    fn main() {
+        print("start")
+        sayHi()
+        show(5)
+        stamp("abc")
+        combine(10, 20)
+        greet("hello")
+        ...
+        for i in [1...5] {
+            print(i)
+        }
+        ...
+        print("end")
+    }
+
+    fn sayHi() {
+        print("HI!")
+    }
+
+    fn greet(word) {
+        print("HELLO:" + word)
+    }
+
+    fn combine(a, b) {
+        print("SUM")
+        print(a + b)
+    }
+
+    fn show(x) {
+        print(x)
+    }
+
+    fn stamp(word) {
+        print(word + "!")
+    }
+
+    fn recurse() {
+        print("R")
+        ...
+    }
+
+    fn deep1() { ... }
+    fn deep2() { ... }
+    fn deep3() { ... }
+    fn deep4() { ... }
+    fn deep5() { ... }
+    fn deep6() { ... }
+    fn deep7() { ... }
+    fn deep8() { ... }
+    fn deep9() { ... }
+    fn deep10() { ... }
+
+    fn boomFn() {
+        boom
+    }
+
+    fn bsodFn() {
+        bsod
+    }
+
+    fn hangFn() {
+        string s = input()
+    }
+}
